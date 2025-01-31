@@ -84,6 +84,15 @@ final class Distance
         $this->value = $value * self::$units[$unit];
     }
 
+    public static function calculate(Position $position1, Position $position2, callable $function = null): self
+    {
+        if(!$function) {
+            $function = 'Geokit\distanceHaversine';
+        }
+
+        return $function($position1, $position2);
+    }
+
     public static function fromString(string $input): self
     {
         if ((bool) preg_match('/(\-?\d+\.?\d*)\s*((kilo)?met[er]+s?|m|km|miles?|mi|yards?|yd|feet|foot|ft|in(ch(es)?)?|″|nautical(mile)?s?|nm)?$/u', $input, $match)) {
