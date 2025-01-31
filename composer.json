@@ -1,5 +1,5 @@
 {
-    "name": "geokit/geokit",
+    "name": "donotcarry/geokit",
     "description": "Geo-Toolkit for PHP",
     "keywords": ["geo", "geometry", "geography"],
     "homepage": "https://github.com/jsor/geokit",
@@ -9,6 +9,11 @@
             "name": "Jan Sorgalla",
             "email": "jsorgalla@gmail.com",
             "homepage": "http://sorgalla.com"
+        },
+        {
+            "name": "DoNotCarry",
+            "email": "engineering@donotcarry.tech",
+            "homepage": "http://www.donotcarry.com"
         }
     ],
     "require": {
