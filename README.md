@@ -32,7 +32,7 @@ Install the latest version with [Composer](https://getcomposer.org).
 composer require donotcarry/geokit
 ```
 
-Check the [Packagist page](https://packagist.org/packages/geokit/geokit) for all
+Check the [Packagist page](https://packagist.org/packages/donotcarry/geokit) for all
 available versions.
 
 Reference
@@ -201,6 +201,19 @@ $distance2 = distanceVincenty($from, $to);
 ```
 
 Both functions return a [Distance](#distance) instance.
+
+A static method from Distance can also be used to calculate the distance. The default function callback is `distanceHaversine` but can be modified at call time:
+
+```php
+use Geokit\Distance;
+use Geokit\Position;
+
+$from = Position::fromXY(0, 1);
+$to = Position::fromXY(1, 0);
+
+$distance1 = Distance::calculate($from, $to);
+$distance2 = Distance::calculate($from, $to, 'Geokit\distanceVicenty');
+```
 
 #### Transformations
 
