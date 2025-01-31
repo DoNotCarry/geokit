@@ -10,17 +10,18 @@ Geokit is a PHP toolkit to solve geo-related tasks like:
 [![Build Status](https://github.com/jsor/geokit/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/jsor/geokit/actions/workflows/ci.yml)
 [![Coverage Status](https://coveralls.io/repos/jsor/geokit/badge.svg?branch=main&service=github)](https://coveralls.io/github/jsor/geokit?branch=main)
 
-* [Installation](#installation)
-* [Reference](#reference)
-    * [Distance](#distance)
-    * [Position](#position)
-    * [BoundingBox](#boundingbox)
-    * [Polygon](#polygon)
-    * [Functions](#functions)
-        * [Distance calculations](#distance-calculations)
-        * [Transformations](#transformations)
-        * [Other calculations](#other-calculations)
-* [License](#license)
+- [Geokit](#geokit)
+  - [Installation](#installation)
+  - [Reference](#reference)
+    - [Distance](#distance)
+    - [Position](#position)
+    - [BoundingBox](#boundingbox)
+    - [Polygon](#polygon)
+    - [Functions](#functions)
+      - [Distance calculations](#distance-calculations)
+      - [Transformations](#transformations)
+      - [Other calculations](#other-calculations)
+  - [License](#license)
 
 Installation
 ------------
@@ -28,7 +29,7 @@ Installation
 Install the latest version with [Composer](https://getcomposer.org).
 
 ```bash
-composer require geokit/geokit
+composer require donotcarry/geokit
 ```
 
 Check the [Packagist page](https://packagist.org/packages/geokit/geokit) for all
@@ -212,7 +213,7 @@ use Geokit\Position;
 use function Geokit\circle;
 
 $circlePolygon = circle(
-    Position::fromXY(8.50207515, 49.50042565), 
+    Position::fromXY(8.50207515, 49.50042565),
     Distance::fromString('5km'),
     32
 );
